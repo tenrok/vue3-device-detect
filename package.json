@@ -1,6 +1,6 @@
 {
   "name": "@tenrok/vue3-device-detect",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A device detector plugin of Vue",
   "keywords": [
     "browser",
@@ -34,6 +34,8 @@
   ],
   "scripts": {
     "dev": "vite",
+    "demo:build": "run-p type-check \"demo:build-only {@}\" --",
+    "demo:build-only": "vite --config vite.config-demo.ts build",
     "build": "run-p type-check \"build-only {@}\" --",
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
