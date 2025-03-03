@@ -8,6 +8,8 @@
 
 Detect device type and render content based on device type
 
+#### This is `Vue 3` compatible version. If you are using `Vue 2` [Click Here](https://github.com/tenrok/vue-device-detect)
+
 ## Quickstart
 
 Install using
