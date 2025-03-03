@@ -1,0 +1,64 @@
+{
+  "name": "@tenrok/vue3-device-detect",
+  "version": "1.0.0",
+  "description": "A device detector plugin of Vue",
+  "keywords": [
+    "browser",
+    "detect",
+    "device",
+    "mobile",
+    "phone",
+    "tablet",
+    "useragent",
+    "vue"
+  ],
+  "homepage": "https://github.com/tenrok/vue3-device-detect",
+  "bugs": {
+    "url": "https://github.com/tenrok/vue3-device-detect/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tenrok/vue3-device-detect.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Sergey Solodyagin",
+    "url": "https://github.com/solodyagin"
+  },
+  "type": "module",
+  "main": "dist/vue3-device-detect.js",
+  "types": "types/index.d.ts",
+  "files": [
+    "dist/vue3-device-detect.*",
+    "types/*.d.ts"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build",
+    "lint": "eslint . --fix",
+    "format": "prettier --write src/"
+  },
+  "dependencies": {
+    "ua-parser-js": "^2.0.2",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@tsconfig/node22": "^22.0.0",
+    "@types/node": "^22.13.4",
+    "@types/ua-parser-js": "^0.7.39",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/eslint-config-prettier": "^10.2.0",
+    "@vue/eslint-config-typescript": "^14.4.0",
+    "@vue/tsconfig": "^0.7.0",
+    "eslint": "^9.20.1",
+    "eslint-plugin-vue": "^9.32.0",
+    "jiti": "^2.4.2",
+    "npm-run-all2": "^7.0.2",
+    "prettier": "^3.5.1",
+    "typescript": "~5.7.3",
+    "vite": "^6.1.0",
+    "vue-tsc": "^2.2.2"
+  }
+}
