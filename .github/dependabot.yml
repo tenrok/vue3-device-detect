@@ -1,12 +1,12 @@
 version: 2
 updates:
-  - package-ecosystem: "npm"
-    directory: "/"
+  - package-ecosystem: 'npm'
+    directory: '/'
     schedule:
-      interval: "daily"
-      time: "12:00"
-      timezone: "Europe/Moscow"
+      interval: 'daily'
+      time: '12:00'
+      timezone: 'Europe/Moscow'
     labels:
-      - "Type: Dependencies"
-    versioning-strategy: "increase"
-    rebase-strategy: "disabled"
+      - 'dependencies'
+    versioning-strategy: 'increase'
+    rebase-strategy: 'disabled'
