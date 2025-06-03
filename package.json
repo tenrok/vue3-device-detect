@@ -47,7 +47,7 @@
     "vue": "^3.5.16"
   },
   "devDependencies": {
-    "@tsconfig/node22": "^22.0.0",
+    "@tsconfig/node22": "^22.0.2",
     "@types/node": "^22.15.27",
     "@types/ua-parser-js": "^0.7.39",
     "@vitejs/plugin-vue": "^5.2.4",
