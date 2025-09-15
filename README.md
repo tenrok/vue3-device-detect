@@ -2,7 +2,7 @@
 
 [![Version](https://img.shields.io/npm/v/@tenrok/vue3-device-detect.svg)](https://www.npmjs.com/package/@tenrok/vue3-device-detect)
 [![License](https://img.shields.io/npm/l/@tenrok/vue3-device-detect.svg)](https://github.com/tenrok/vue3-device-detect/blob/main/LICENSE)
-[![vue](https://img.shields.io/badge/vue-3.5.3-brightgreen.svg)](https://github.com/vuejs/vue)
+[![vue](https://img.shields.io/badge/vue-3.5.21-brightgreen.svg)](https://github.com/vuejs/vue)
 [![GitHub last commit](https://img.shields.io/github/last-commit/tenrok/vue3-device-detect.svg)](https://github.com/tenrok/vue3-device-detect)
 [![Downloads](https://img.shields.io/npm/dm/@tenrok/vue3-device-detect.svg)](https://npmcharts.com/compare/@tenrok/vue3-device-detect?minimal=true)
 
