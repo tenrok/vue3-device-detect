@@ -50,17 +50,20 @@
     "@tsconfig/node22": "^22.0.2",
     "@types/node": "^22.18.3",
     "@types/ua-parser-js": "^0.7.39",
-    "@vitejs/plugin-vue": "^5.2.4",
+    "@vitejs/plugin-vue": "^6.0.1",
     "@vue/eslint-config-prettier": "^10.2.0",
     "@vue/eslint-config-typescript": "^14.6.0",
     "@vue/tsconfig": "^0.8.1",
-    "eslint": "^9.20.1",
-    "eslint-plugin-vue": "^9.33.0",
+    "eslint": "^9.31.0",
+    "eslint-plugin-vue": "~10.3.0",
     "jiti": "^2.5.1",
     "npm-run-all2": "^8.0.4",
-    "prettier": "^3.6.2",
+    "prettier": "3.6.2",
     "typescript": "~5.9.2",
-    "vite": "^6.3.6",
-    "vue-tsc": "^2.2.12"
+    "vite": "^7.0.6",
+    "vue-tsc": "^3.0.4"
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
   }
 }

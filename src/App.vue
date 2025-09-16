@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { deviceType, deviceModel, deviceVendor, osName, osVersion, browserName, browserVersion, engineName, engineVersion } from '../lib'
+import { deviceType, deviceModel, deviceVendor, osName, osVersion, browserName, browserVersion, engineName, engineVersion, getUA } from '../lib'
 </script>
 
 <template>
   <ul>
+    <li>User Agent: {{ getUA() }}</li>
     <li>Device Type: {{ deviceType() }}</li>
     <li>Device: {{ deviceVendor() }} {{ deviceModel() }}</li>
     <li>OS: {{ osName() }} {{ osVersion() }}</li>

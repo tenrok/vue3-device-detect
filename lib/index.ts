@@ -1,5 +1,5 @@
 import { UAParser } from 'ua-parser-js'
-import { DeviceTypes, OSTypes, BrowserTypes } from './constants'
+import { BrowserName, DeviceType, OSName } from 'ua-parser-js/enums'
 import { defineComponent, h, type Plugin } from 'vue'
 
 const UA = new UAParser()
@@ -10,43 +10,43 @@ const engine = UA.getEngine()
 const userAgent = UA.getUA()
 
 const detectIPad = () => /iPad/.test(userAgent)
-const detectEdgeChromium = () => os.name === OSTypes.WINDOWS && os.version === '10' && userAgent.indexOf('Edg/') !== -1
+const detectEdgeChromium = () => os.name === OSName.WINDOWS && os.version === '10' && userAgent.indexOf('Edg/') !== -1
 
-const isAndroid = os.name === OSTypes.ANDROID
-const isChrome = browser.name === BrowserTypes.CHROME
-const isChromium = browser.name === BrowserTypes.CHROMIUM
-const isConsole = device.type === DeviceTypes.CONSOLE
-const isDesktop = device.type === DeviceTypes.DESKTOP
-const isEdge = browser.name === BrowserTypes.EDGE || detectEdgeChromium()
+const isAndroid = os.name === OSName.ANDROID
+const isChrome = browser.name === BrowserName.CHROME
+const isChromium = browser.name === BrowserName.CHROMIUM
+const isConsole = device.type === DeviceType.CONSOLE
+const isDesktop = !device.type || device.type === DeviceType.DESKTOP
+const isEdge = browser.name === BrowserName.EDGE || detectEdgeChromium()
 const isEdgeChromium = detectEdgeChromium()
-const isEdgeLegacy = browser.name === BrowserTypes.EDGE
+const isEdgeLegacy = browser.name === BrowserName.EDGE
 const isElectron = /electron/.test(userAgent.toLowerCase())
-const isEmbedded = device.type === DeviceTypes.EMBEDDED
-const isFirefox = browser.name === BrowserTypes.FIREFOX
-const isIE = browser.name === BrowserTypes.INTERNET_EXPLORER || browser.name === BrowserTypes.IE
-const isIOS = os.name === OSTypes.IOS || detectIPad()
+const isEmbedded = device.type === DeviceType.EMBEDDED
+const isFirefox = browser.name === BrowserName.FIREFOX
+const isIE = browser.name === BrowserName.IE
+const isIOS = os.name === OSName.IOS || detectIPad()
 const isIPad = detectIPad()
 const isIPhone = /iPhone/.test(userAgent)
 const isIPod = /iPod/.test(userAgent)
-const isLinux = os.name === OSTypes.LINUX
-const isMacOS = os.name === OSTypes.MAC_OS
-const isMIUI = browser.name === BrowserTypes.MIUI
-const isMobile = device.type === DeviceTypes.MOBILE || device.type === DeviceTypes.TABLET || detectIPad()
-const isMobileOnly = device.type === DeviceTypes.MOBILE
-const isMobileSafari = browser.name === BrowserTypes.MOBILE_SAFARI || detectIPad()
-const isOpera = browser.name === BrowserTypes.OPERA
-const isSafari = browser.name === BrowserTypes.SAFARI || browser.name === BrowserTypes.MOBILE_SAFARI
-const isSamsungBrowser = browser.name === BrowserTypes.SAMSUNG_BROWSER
-const isSmartTV = device.type === DeviceTypes.SMART_TV
-const isTablet = device.type === DeviceTypes.TABLET || detectIPad()
-const isWearable = device.type === DeviceTypes.WEARABLE
-const isWindows = os.name === OSTypes.WINDOWS
-const isWinPhone = os.name === OSTypes.WINDOWS_PHONE
-const isYandex = browser.name === BrowserTypes.YANDEX
+const isLinux = os.name === OSName.LINUX
+const isMacOS = os.name === OSName.MACOS
+const isMIUI = browser.name === BrowserName.MIUI
+const isMobile = device.type === DeviceType.MOBILE || device.type === DeviceType.TABLET || detectIPad()
+const isMobileOnly = device.type === DeviceType.MOBILE
+const isMobileSafari = browser.name === BrowserName.SAFARI_MOBILE || detectIPad()
+const isOpera = browser.name === BrowserName.OPERA
+const isSafari = browser.name === BrowserName.SAFARI || browser.name === BrowserName.SAFARI_MOBILE
+const isSamsungBrowser = browser.name === BrowserName.SAMSUNG
+const isSmartTV = device.type === DeviceType.SMARTTV
+const isTablet = device.type === DeviceType.TABLET || detectIPad()
+const isWearable = device.type === DeviceType.WEARABLE
+const isWindows = os.name === OSName.WINDOWS
+const isWinPhone = os.name === OSName.WINDOWS_PHONE
+const isYandex = browser.name === BrowserName.YANDEX
 const browserName = () => browser.name
 const browserVersion = () => browser.version
 const deviceModel = () => device.model
-const deviceType = () => device.type || 'desktop'
+const deviceType = () => device.type || DeviceType.DESKTOP
 const deviceVendor = () => device.vendor
 const engineName = () => engine.name
 const engineVersion = () => engine.version
